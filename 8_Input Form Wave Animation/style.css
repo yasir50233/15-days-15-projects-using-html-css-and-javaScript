@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: steelblue;
+    color: #fff;
+    font-family: "Mulish", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+}
+.container{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 5px;
+    height: 400px;
+    width: 360px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.container h1{
+    text-align: center;
+}
+.container a{
+    color: steelblue;
+    text-decoration: none;
+}
+.form-control{
+    position: relative;
+    margin: 20px 0 30px;
+}
+.form-control input{
+    background-color: transparent;
+    border :none;
+    border-bottom: 2px solid #fff;
+    padding: 15px 0;
+    display: block;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+}
+.form-control input:focus,.form-control input:valid{
+    outline: none;
+    border-bottom-color:lightblue ;
+}
+.btn{
+    width:100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 20px;
+    background-color: lightblue;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+}
+.btn:focus{
+    outline: 0;
+    transform: scale(0.98);
+}
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.form-control label span{
+    display:inline-block;
+    transition: transform 0.3s ease-in;
+ }
+ 
+ .form-control input:focus + label span, .form-control input:valid + label span{
+ 
+     transform: translateY(-30px);
+ }

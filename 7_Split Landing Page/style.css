@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --left-bg-colr: rgba(87,84,236,0.7);
+    --right-bg-colr: rgba(43,43,43,0.8);
+    --hover-left-colr: rgba(87,84,236,1);
+    --hover-right-colr: rgba(28,122,28,1);
+    --hover-width: 75%;
+    --other-width:25%;
+
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+    margin: 0%;
+}
+.container{
+    position: relative;
+    background-color: #333;
+    width: 100%;
+    height: 100%;
+}
+.split{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+.split.left{
+    left: 0;
+    background: url(images/PlayStation.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.split.right{
+    right: 0;
+    background: url(images/Xbox_X_series.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.split.left::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--left-bg-colr);
+}
+.split.right::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--right-bg-colr);
+}
+h1{
+    color: #fff;
+    font-size: 5rem;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    white-space: nowrap;
+}
+.Btn{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    padding: 15px;
+    width: 15rem;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in;
+    -webkit-transition: 0.3s ease-in;
+    -moz-transition: 0.3s ease-in;
+    -ms-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
+    font-size: 1.2rem;
+    word-spacing: 5px;
+}
+.split.left, .split.left::before,.split.right, .split.right::before{
+    transition:all 1s ease;
+}
+.split.left .Btn:hover{
+    background-color: var(--hover-left-colr);
+    border-color: var(--hover-left-colr);
+}
+.split.right .Btn:hover{
+    background-color: var(--hover-right-colr);
+    border-color: var(--hover-right-colr);
+}
+.hover-left .left{
+    width: var(--hover-width);
+}
+.hover-left .right{
+    width: var(--other-width);
+}
+.hover-right .left{
+    width: var(--other-width);
+}
+.hover-right .right{
+    width: var(--hover-width);
+}
+
+@media (max-width:800px) {
+    h1{
+        font-size: 2rem;
+        top: 30%;
+    }
+    .Btn{
+        padding: 1rem;
+        width: 10rem;
+    }
+}
