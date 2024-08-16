@@ -47,7 +47,7 @@ button:hover{
     color: #eb4d4b;
     border: 2px solid #eb4d4b;
 }
-textarea{
+input {
     height: 220px;
     width: 400px;
     font-size: larger;
@@ -59,23 +59,16 @@ textarea{
     border-radius: 5px;
     font-family:sans-serif;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
+   
 }
-textarea:focus{
+input:focus{
     border: none;
     transition: all 0.5s;
 }
-span{
+p {
     display: block;
     margin-top: 5px;
     text-align: center;
     font-size: 18px;
     transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
 }
